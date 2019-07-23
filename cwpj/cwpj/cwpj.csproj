@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D15E62B6-4C6B-4D41-89AF-ED8CC1503BEA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cwpj</RootNamespace>
+    <AssemblyName>cwpj</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sheet\asset固定资产.cs" />
+    <Compile Include="compute计算所需参数类.cs" />
+    <Compile Include="globalpara.cs" />
+    <Compile Include="inputdata.cs" />
+    <Compile Include="singleDomain\jk建设期借款还本付息.cs" />
+    <Compile Include="singleDomain\jk短期借款还本付息.cs" />
+    <Compile Include="sheet\jk还本付息表汇总Sheet.cs" />
+    <Compile Include="singleDomain\jkldzj流动资金借款还本付息.cs" />
+    <Compile Include="ks亏损拟补\ksnb.cs" />
+    <Compile Include="sheet\ldzj流动资金还款sheet.cs" />
+    <Compile Include="policy等额还本付息.cs" />
+    <Compile Include="Policy等额还本利息照付.cs" />
+    <Compile Include="policy还款策略.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sheet\jkhbsheet借款还本付息表.cs" />
+    <Compile Include="sheet\lrfp利润分配sheet.cs" />
+    <Compile Include="sheet\lrsheet利润表.cs" />
+    <Compile Include="sheet\wxzc无形资产sheet.cs" />
+    <Compile Include="sheet\xmtz项目投资现金流量表.cs" />
+    <Compile Include="sheet\zbj资本金现金流流量表.cs" />
+    <Compile Include="sheet\zcbsheet总成本表.cs" />
+    <Compile Include="singleDomain\butie补贴收入.cs" />
+    <Compile Include="singleDomain\jklx借款还本利息.cs" />
+    <Compile Include="singleDomain\jsq固定资产投资.cs" />
+    <Compile Include="singleDomain\jycb经营成本.cs" />
+    <Compile Include="singleDomain\lrfp利润分配.cs" />
+    <Compile Include="singleDomain\lr利润.cs" />
+    <Compile Include="singleDomain\revenue收入.cs" />
+    <Compile Include="singleDomain\tx摊销.cs" />
+    <Compile Include="singleDomain\wxzc无形资产.cs" />
+    <Compile Include="singleDomain\xmtz项目投资.cs" />
+    <Compile Include="singleDomain\zbj资本金.cs" />
+    <Compile Include="singleDomain\zcb总成本.cs" />
+    <Compile Include="singleDomain\zzs增值税.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
